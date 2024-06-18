@@ -84,7 +84,7 @@ export const executeDbQuery = async (
     try {
       log.magenta(`Attempting query...`, "executeDbQuery", LogState.DEBUGMODE);
 
-      if (!client || !('query' in client))
+      if (!client)
         throw new DatabaseError(
           "Could'nt find a client connection. Make sure that you have initialized the client connection before proceeding to this method."
         );

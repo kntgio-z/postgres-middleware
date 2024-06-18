@@ -27,7 +27,7 @@ export const initializeDbTransaction = async (
   const init = async (): Promise<void> => {
     try {
       log.magenta(`Initializing transaction...`, "init", LogState.DEBUGMODE);
-      if (!client || !("query" in client))
+      if (!client)
         throw new DatabaseError(
           "Could'nt find a client connection. Make sure that you have initialized the client connection before proceeding to this method."
         );
@@ -107,7 +107,7 @@ export const initializeDbTransaction = async (
   const commit = async (): Promise<void> => {
     try {
       log.magenta(`Committing transaction...`, "commit", LogState.DEBUGMODE);
-      if (!client || !("query" in client))
+      if (!client)
         throw new DatabaseError(
           "Could'nt find a client connection. Make sure that you have initialized the client connection before proceeding to this method."
         );
