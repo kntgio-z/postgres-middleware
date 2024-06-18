@@ -1,0 +1,7 @@
+/__test__
+/src
+/node_modules
+
+jsconfig.json
+tsconfig.json
+tsup.config.ts
